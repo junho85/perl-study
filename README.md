@@ -1,1 +1,1 @@
-# study-perl
+# perl-study
