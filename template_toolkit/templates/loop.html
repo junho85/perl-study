@@ -1,0 +1,48 @@
+[% foo   = 'Foo'
+items = [ 'one', 'two', 'three' ]
+%]
+
+Things:
+[% FOREACH thing IN [ foo 'Bar' "$foo Baz" ] %]
+* [% thing %]
+[% END %]
+
+Items:
+[% FOREACH i IN items %]
+* [% i %]
+[% END %]
+
+Stuff:
+[% stuff = [ foo "$foo Bar" ] %]
+[% FOREACH s IN stuff %]
+* [% s %]
+[% END %]
+
+
+IN 대신 = 을 사용 할 수도 있음
+
+[% FOREACH i = items %]
+[% END %]
+
+[% userlist = [
+{ id => 'tom',   name => 'Thomas'  },
+{ id => 'dick',  name => 'Richard'  },
+{ id => 'larry', name => 'Lawrence' },
+]
+%]
+
+[% FOREACH user IN userlist %]
+[% user.id %] [% user.name %]
+[% END %]
+
+[% FOREACH userlist %]
+[% id %] [% name %]
+[% END %]
+
+<table>
+    [% FOREACH name IN ['Arthur', 'Ford', 'Trillian'] -%]
+    <tr class="[% loop.parity %]">
+        <td>[% name %]</td>
+    </tr>
+    [% END %]
+</table>
