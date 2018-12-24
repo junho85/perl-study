@@ -15,7 +15,10 @@ my $tt = Template->new({
     INCLUDE_PATH => ["$FindBin::Bin/templates",],
 }) || die "$Template::ERROR\n";
 
-my $vars = (
-);
+my $vars = {
 
-$tt->process("main.html", $vars) || die $tt->error(), "\n";
+};
+
+my $output;
+$tt->process("main.html", $vars, \$output) || die $tt->error(), "\n";
+print $output;
