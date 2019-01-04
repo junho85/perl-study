@@ -1,3 +1,7 @@
+[% FOREACH item IN items %]
+    [% loop.count %] [% item.name %] [% item.address %]<br>
+[% END %]
+
 [% foo   = 'Foo'
 items = [ 'one', 'two', 'three' ]
 %]

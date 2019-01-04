@@ -15,8 +15,19 @@ my $tt = Template->new({
     INCLUDE_PATH => ["$FindBin::Bin/templates",],
 }) || die "$Template::ERROR\n";
 
-my $vars = {
+my @items = (
+    {
+        name    => "apple",
+        address => "mango",
+    },
+    {
+        name    => "hello",
+        address => "world",
+    },
+);
 
+my $vars = {
+    items => \@items,
 };
 
 my $output;
