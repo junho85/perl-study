@@ -9,3 +9,8 @@ print(Dumper($array_of_array_ref)); # [[1,2,3],[4,5,6]]
 
 my @result = map {@$_} @$array_of_array_ref;
 print(Dumper(\@result)); # [1,2,3,4,5,6]
+
+use List::Flatten;
+
+my @result2 = flat @$array_of_array_ref;
+print(Dumper(\@result2)); # [1,2,3,4,5,6]
