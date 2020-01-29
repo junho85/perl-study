@@ -8,7 +8,7 @@ use Data::Dumper;
 
 my $res = Net::DNS::Resolver->new;
 
-my $domain = "daum.net";
+my $domain = "gmail.com";
 
 # mx 메서드 이용 방법
 my @mxs = mx($res, $domain);

@@ -16,7 +16,7 @@ $smtp->to($to); # to
 $smtp->data();
 $smtp->datasend("From: $from\n");
 $smtp->datasend("To: $to\n");
-$smtp->datasend("Subject: this is test mail for perl\n");
+$smtp->datasend("Subject: this is test mail using perl Net::SMTP\n");
 $smtp->datasend("\n");
 $smtp->datasend("A simple test message\n");
 $smtp->dataend();
