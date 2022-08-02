@@ -5,7 +5,9 @@ use warnings;
 
 use FindBin;
 
-my @lines = `cat $FindBin::Bin/download_rename_sample.txt`;
+# my @lines = `cat $FindBin::Bin/download_rename_sample.txt`;
+my @lines = `cat $FindBin::Bin/download_rename.txt`;
+
 =pod
 tab으로 구분
 
